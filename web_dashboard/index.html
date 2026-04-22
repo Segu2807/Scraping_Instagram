@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Scraper Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>📸 Instagram Scraper</h1>
+            <p>Dashboard de visualización de datos extraídos</p>
+        </header>
+
+        <!-- Controles -->
+        <div class="controls">
+            <button id="refreshBtn" class="btn btn-primary">🔄 Actualizar Datos</button>
+            <label class="file-label">
+                📁 Cargar JSON
+                <input type="file" id="fileInput" accept=".json" hidden>
+            </label>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Cargando datos...</p>
+        </div>
+
+        <!-- Error -->
+        <div id="error" class="error hidden"></div>
+
+        <!-- Perfil -->
+        <div id="profile" class="profile-card hidden">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <span id="profileAvatar">👤</span>
+                </div>
+                <div class="profile-info">
+                    <h2 id="profileUsername">@username</h2>
+                    <p id="profileBio" class="bio">Bio</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-value" id="statPosts">0</span>
+                            <span class="stat-label">Posts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="statFollowers">0</span>
+                            <span class="stat-label">Seguidores</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="statFollowing">0</span>
+                            <span class="stat-label">Siguiendo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline de posts -->
+        <div id="timeline" class="timeline hidden">
+            <h3>📸 Publicaciones Recientes</h3>
+            <div id="postsContainer" class="posts-grid"></div>
+        </div>
+
+        <!-- Modal para ver post completo -->
+        <div id="postModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
