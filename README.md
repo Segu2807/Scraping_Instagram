@@ -24,21 +24,32 @@ Limitaciones y Consideraciones
 Este proyecto es un scraper de Instagram que extrae información de perfiles públicos sin necesidad de API oficial. Utiliza Playwright para simular un navegador real y cookies persistentes para mantener la sesión.
 
 ✨ Características Principales
+
 ✅ Extrae datos del perfil (username, biografía, estadísticas)
+
 ✅ Obtiene URLs de publicaciones
+
 ✅ Extrae metadatos (fechas, likes, descripciones)
+
 ✅ Identifica hashtags y menciones
+
 ✅ Guarda datos en formato JSON estructurado
+
 ✅ Panel web para visualización de datos
+
 ✅ Sistema de cookies para evitar login repetido
 
 ⚠️ Limitaciones
+
 ❌ Las imágenes no se descargan (Instagram bloquea con error 403
+
 ❌ No extrae comentarios reales de usuarios
+
 ❌ Solo funciona con cuentas públicas
 
+
 💻 Requisitos Previos
-# Versiones recomendadas
+* Versiones recomendadas
 Python 3.8 o superior
 Node.js 14+ (opcional, para el dashboard)
 
@@ -202,22 +213,22 @@ Técnicas
 ⚠️ Puede ser bloqueado si se hacen muchas peticiones rápidas
 
 Recomendaciones para evitar bloqueos
-# Usar delays entre acciones
+Usar delays entre acciones
 page.wait_for_timeout(3000)  # 3 segundos
-# Limitar número de posts
+Limitar número de posts
 MAX_POSTS = 10  # No extraer demasiados
-# Usar User-Agent realista
+Usar User-Agent realista
 user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 
 📚 Comandos Rápidos de Referencia
-# Ejecutar scraper
+Ejecutar scraper
 python main.py
-# Iniciar dashboard
+Iniciar dashboard
 cd web_dashboard && python server.py
-# Limpiar cookies (forzar nuevo login)
+Limpiar cookies (forzar nuevo login)
 rm data/instagram_cookies.json  # Linux/Mac
 del data\instagram_cookies.json  # Windows
-# Ver imágenes descargadas (si las hay)
+Ver imágenes descargadas (si las hay)
 python view_images.py
 
 📄 Licencia
