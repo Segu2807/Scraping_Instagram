@@ -171,7 +171,9 @@ Funcionalidades del Dashboard
 └─────────────────────────────────────────────┘
 
 📊 Estructura del JSON de Salida
+
 json
+
 {
   "fechaExtraccion": "2026-04-22T10:50:57.740668",
   "perfil": {
@@ -200,34 +202,54 @@ json
 }
 
 🔒 Limitaciones y Consideraciones
+
 Éticas y Legales
+
 ✅ Solo para cuentas públicas
+
 ✅ Respetar robots.txt de Instagram
+
 ✅ No usar para fines comerciales sin permiso
+
 ✅ Implementar delays para no sobrecargar servidores
 
 Técnicas
+
 ❌ No descarga imágenes (bloqueado por Instagram)
+
 ❌ No extrae comentarios reales (requiere scroll adicional)
+
 ⚠️ Los selectores CSS pueden cambiar (Instagram actualiza su HTML)
+
 ⚠️ Puede ser bloqueado si se hacen muchas peticiones rápidas
 
 Recomendaciones para evitar bloqueos
+
 Usar delays entre acciones
+
 page.wait_for_timeout(3000)  # 3 segundos
+
 Limitar número de posts
+
 MAX_POSTS = 10  # No extraer demasiados
+
 Usar User-Agent realista
+
 user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 
 📚 Comandos Rápidos de Referencia
+
 Ejecutar scraper
 python main.py
+
 Iniciar dashboard
+
 cd web_dashboard && python server.py
+
 Limpiar cookies (forzar nuevo login)
-rm data/instagram_cookies.json  # Linux/Mac
+
 del data\instagram_cookies.json  # Windows
+
 Ver imágenes descargadas (si las hay)
 python view_images.py
 
