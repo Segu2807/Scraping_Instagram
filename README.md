@@ -1,14 +1,23 @@
 📸 Instagram Scraper
+
 📋 Tabla de Contenidos
 
 Descripción General
+
 Requisitos Previos
+
 Instalación
+
 Estructura del Proyecto
+
 Cómo Funciona
+
 Ejecución del Scraper
+
 Dashboard Web
+
 Solución de Problemas Comunes
+
 Limitaciones y Consideraciones
 
 📝 Descripción General
