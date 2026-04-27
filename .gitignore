@@ -10,6 +10,3 @@ downloads/
 # Cache
 __pycache__/
 *.pyc
-
-# Entorno
-.env
