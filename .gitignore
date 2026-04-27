@@ -1,1 +1,15 @@
+# Cookies (CRÍTICO)
 data/instagram_cookies.json
+
+# Resultados (opcional)
+data/resultados/*.json
+
+# Descargas
+downloads/
+
+# Cache
+__pycache__/
+*.pyc
+
+# Entorno
+.env
